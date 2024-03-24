@@ -15,6 +15,12 @@ public class TouristAttraction {
         this.location = location;
         this.tags = tags;
     }
+    public TouristAttraction(String name, String description, String location){
+        this.name = name;
+        this.description = description;
+        this.location = location;
+    }
+
 
     public String getName() {
         return name;

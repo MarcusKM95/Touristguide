@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import tourism.touristguide.model.TouristAttraction;
 import tourism.touristguide.service.TouristService;
 import org.springframework.ui.Model;
+
+import java.util.Map;
 import java.util.NoSuchElementException;
 
 import java.util.Arrays;
@@ -27,7 +29,7 @@ public class TouristController {
 
     @GetMapping("/attractions")
     public String showAttractionList(Model model) {
-        List<TouristAttraction> attractions = touristService.getAllAttractions();
+        List<Map<String, Object>> attractions = touristService.getAllAttractions();
         model.addAttribute("attractions", attractions);
         return "attractionsList";
     }
