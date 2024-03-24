@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="da" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tags</title>
+    <link rel="stylesheet" type="text/css" href="/main.css"> <!-- Link to main.css -->
+</head>
+<body>
+<h1>Tags for <span th:text="${attraction.name}"></span></h1>
+<!-- Loop through each tag -->
+<div th:each="tag : ${tags}">
+    <p th:text="${tag}"></p>
+</div>
+<!-- Back button -->
+<a href="/attractions/attractions">Tilbage</a>
+</body>
+</html>

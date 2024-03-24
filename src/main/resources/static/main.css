@@ -1,0 +1,26 @@
+/* main.css */
+
+/* Style for the attraction table */
+.attraction-table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Collapse border */
+    margin-top: 20px; /* Add space above table */
+}
+
+/* Style for table header */
+.attraction-table th {
+    background-color: #f2f2f2; /* Light gray background color for header */
+    padding: 8px; /* Padding for header cells */
+    text-align: left; /* Left-align text in header */
+    border-bottom: 1px solid #ddd; /* Bottom border for header cells */
+}
+
+/* Style for table rows */
+.attraction-row {
+    border-bottom: 1px solid #ddd; /* Bottom border for rows */
+}
+
+/* Style for table data */
+.attraction-table td {
+    padding: 8px; /* Padding for data cells */
+    text-align: left;  }/* Left-align text in data cells */

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="da" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Attraction List</title>
+    <link rel="stylesheet" type="text/css" href="/main.css"> <!-- Link to main.css -->
+</head>
+<body>
+<h1>Turist Attraktioner</h1>
+<!-- Add Attraction button -->
+<a href="/attractions/add" class="add-button">Tilføj attraktion</a>
+<table class="attraction-table">
+    <thead>
+    <tr>
+        <th>Navn</th>
+        <th>Beskrivelse</th>
+        <th>Tags</th> <!-- Added new column for Tags button -->
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Loop through each attraction -->
+    <tr th:each="attraction : ${attractions}" class="attraction-row">
+        <!-- Name of the attraction -->
+        <td th:text="${attraction.name}"></td>
+        <!-- Description of the attraction -->
+        <td th:text="${attraction.description}"></td>
+        <td>
+            <a th:href="@{'/attractions/tags/' + ${attraction.name}}" class="tags-button">Tags</a>
+        </td>
+        <td>
+            <a th:href="@{'/attractions/' + ${attraction.name} + '/edit'}">Update</a>
+            <a th:href="@{'/attractions/' + ${attraction.name} + '/delete'}">Delete</a> <!-- Added delete button -->
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
