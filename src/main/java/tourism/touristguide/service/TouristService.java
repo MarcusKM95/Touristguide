@@ -6,7 +6,6 @@ import tourism.touristguide.model.TouristAttraction;
 import tourism.touristguide.repository.TouristRepository;
 
 import java.util.List;
-import java.util.Map;
 
 
 @Service
@@ -23,7 +22,7 @@ public class TouristService {
         touristRepository.addAttraction(attraction);
     }
 
-    public List<Map<String, Object>> getAllAttractions(){
+    public List<TouristAttraction> getAllAttractions(){
         return touristRepository.getAllAttractions();
     }
 

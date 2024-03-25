@@ -64,12 +64,18 @@ public class TouristRepository {
 
     //READ
 
-    public List<Map<String, Object>> getAllAttractions(){
+    /*public List<Map<String, Object>> getAllAttractions(){
         String sql = "SELECT * FROM attractions";
         List<Map<String, Object>> attractions = jdbcTemplate.queryForList(sql, new AttractionRowMapper());
         System.out.println(attractions.size());
         return attractions;
        // return touristAttractions;
+    }*/
+    public List<TouristAttraction> getAllAttractions(){
+        String sql = "SELECT * FROM attractions";
+        List<TouristAttraction> attractions = jdbcTemplate.query(sql, new AttractionRowMapper());
+        System.out.println(attractions.size());
+        return attractions;
     }
 
     public TouristAttraction getAttractionByName(String name){

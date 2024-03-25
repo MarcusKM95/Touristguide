@@ -29,7 +29,7 @@ public class TouristController {
 
     @GetMapping("/attractions")
     public String showAttractionList(Model model) {
-        List<Map<String, Object>> attractions = touristService.getAllAttractions();
+        List<TouristAttraction> attractions = touristService.getAllAttractions();
         model.addAttribute("attractions", attractions);
         return "attractionsList";
     }
